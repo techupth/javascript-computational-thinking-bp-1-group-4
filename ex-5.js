@@ -1,11 +1,21 @@
 function getLetterFrequency(words) {
   // Start coding here
+  let count = {}
+  for(let i = 0; i < words.length; i++) {
+    let letter = words[i]
+    if(count[letter] > 0) {
+    count[letter]++;
+    } else {
+    count[letter] = 1;
+    }
+  }
+  return count
 }
 
-const str = "Techupth";
+const str = "techupth";
 
-getLetterFrequency(str);
-
+let a = getLetterFrequency(str);
+console.log(a)
 /* Output:
 {
   t: 2,
